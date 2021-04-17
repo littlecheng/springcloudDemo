@@ -1,0 +1,23 @@
+spring:
+ application:
+  name: consumer-dept
+
+server:
+ port: 80
+
+#Eureka的配置，该服务注册到eureka的地址
+eureka:
+ client:
+  service-url:
+   defaultZone: http://localhost:8761/eureka
+ instance:
+  #修改Eureka监控页中status的默认描述信息。不配置默认为DESKTOP-XXX描述
+  instance-id: springcloud-consumer-dept-80
+
+
+ #热部署
+devtools:
+  restart:
+   enabled: true
+   ditional-paths: src/main/java
+   exclude: WEB/INF/**

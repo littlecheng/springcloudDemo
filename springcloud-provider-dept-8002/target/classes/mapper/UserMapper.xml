@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springcloud.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.example.springcloud.pojo.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="passWord" jdbcType="VARCHAR" property="password" />
+    <result column="realName" jdbcType="VARCHAR" property="realname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, userName, passWord, realName
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.springcloud.pojo.User">
+    insert into user (id, userName, passWord, 
+      realName)
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{realname,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.springcloud.pojo.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        userName,
+      </if>
+      <if test="password != null">
+        passWord,
+      </if>
+      <if test="realname != null">
+        realName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.springcloud.pojo.User">
+    update user
+    <set>
+      <if test="username != null">
+        userName = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        passWord = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        realName = #{realname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.springcloud.pojo.User">
+    update user
+    set userName = #{username,jdbcType=VARCHAR},
+      passWord = #{password,jdbcType=VARCHAR},
+      realName = #{realname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.example.springcloud.pojo.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="passWord" jdbcType="VARCHAR" property="password" />
+    <result column="realName" jdbcType="VARCHAR" property="realname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, userName, passWord, realName
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.springcloud.pojo.User">
+    insert into user (id, userName, passWord, 
+      realName)
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{realname,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.springcloud.pojo.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        userName,
+      </if>
+      <if test="password != null">
+        passWord,
+      </if>
+      <if test="realname != null">
+        realName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.springcloud.pojo.User">
+    update user
+    <set>
+      <if test="username != null">
+        userName = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        passWord = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        realName = #{realname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.springcloud.pojo.User">
+    update user
+    set userName = #{username,jdbcType=VARCHAR},
+      passWord = #{password,jdbcType=VARCHAR},
+      realName = #{realname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <cache eviction="FIFO" readOnly="true" size="1024" />
+  <resultMap id="BaseResultMap" type="com.example.springcloud.pojo.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="passWord" jdbcType="VARCHAR" property="password" />
+    <result column="realName" jdbcType="VARCHAR" property="realname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, userName, passWord, realName
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap" useCache="true">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" keyColumn="id" keyProperty="user.id" parameterType="com.example.springcloud.pojo.User" useGeneratedKeys="true">
+    insert into user (id, userName, passWord, 
+      realName)
+    values (#{user.id,jdbcType=INTEGER}, #{user.username,jdbcType=VARCHAR}, #{user.password,jdbcType=VARCHAR},
+      #{user.realname,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertSelective" keyColumn="id" keyProperty="user.id" parameterType="com.example.springcloud.pojo.User" useGeneratedKeys="true">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="user.id != null">
+        id,
+      </if>
+      <if test="user.username != null">
+        userName,
+      </if>
+      <if test="user.password != null">
+        passWord,
+      </if>
+      <if test="user.realname != null">
+        realName,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="user.id != null">
+        #{user.id,jdbcType=INTEGER},
+      </if>
+      <if test="user.username != null">
+        #{user.username,jdbcType=VARCHAR},
+      </if>
+      <if test="user.password != null">
+        #{user.password,jdbcType=VARCHAR},
+      </if>
+      <if test="user.realname != null">
+        #{user.realname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.springcloud.pojo.User">
+    update user
+    <set>
+      <if test="user.username != null">
+        userName = #{user.username,jdbcType=VARCHAR},
+      </if>
+      <if test="user.password != null">
+        passWord = #{user.password,jdbcType=VARCHAR},
+      </if>
+      <if test="user.realname != null">
+        realName = #{user.realname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{user.id,jdbcType=INTEGER}
+  </update>
+
+  <update id="updateByPrimaryKey" parameterType="com.example.springcloud.pojo.User">
+    update user
+    set userName = #{user.username,jdbcType=VARCHAR},
+      passWord = #{user.password,jdbcType=VARCHAR},
+      realName = #{user.realname,jdbcType=VARCHAR}
+    where id = #{user.id,jdbcType=INTEGER}
+  </update>
+</mapper>

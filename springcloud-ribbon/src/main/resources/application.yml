@@ -1,0 +1,13 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka000.com:8761/eureka/,http://eureka001.com:8762/eureka/,http://eureka002.com:8763/eureka/
+  instance:
+    #修改Eureka监控页中status的默认描述信息。不配置默认为DESKTOP-XXX描述
+    instance-id: springcloud-ribbon
+    prefer-ip-address: true

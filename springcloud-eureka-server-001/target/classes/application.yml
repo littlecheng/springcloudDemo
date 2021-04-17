@@ -1,0 +1,21 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: eureka-server-001
+
+#Eureka配置
+eureka:
+  instance:
+    hostname: eureka001.com
+    prefer-ip-address: true
+  # 测试时关闭自我保护机制，保证不可用服务及时踢出
+  server:
+    enable-self-preservation: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://eureka000.com:8761/eureka/,http://eureka002.com:8763/eureka/
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+
