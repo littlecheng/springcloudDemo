@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/springcloud-eureka-server-000/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-ribbon/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-api-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-gateway/pom.xml" />
       </list>
     </option>
   </component>
