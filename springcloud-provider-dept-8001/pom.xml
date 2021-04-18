@@ -78,28 +78,37 @@
 
     </dependencies>
 
-  <!--
-   //这里这个插件会重新生成实体类，mapper类,最好使用过一次就注掉
-   <build>
+    <build>
         <plugins>
             <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.4.0</version>
-                <configuration>
-                    <configurationFile>src/main/resources/generator/generatorConfig.xml</configurationFile>
-                    <overwrite>true</overwrite>
-                    <verbose>true</verbose>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>Generate MyBatis Artifacts</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-    </build>-->
+    </build>
+
+    <!--
+     //这里这个插件会重新生成实体类，mapper类,最好使用过一次就注掉
+     <build>
+          <plugins>
+              <plugin>
+                  <groupId>org.mybatis.generator</groupId>
+                  <artifactId>mybatis-generator-maven-plugin</artifactId>
+                  <version>1.4.0</version>
+                  <configuration>
+                      <configurationFile>src/main/resources/generator/generatorConfig.xml</configurationFile>
+                      <overwrite>true</overwrite>
+                      <verbose>true</verbose>
+                  </configuration>
+                  <executions>
+                      <execution>
+                          <id>Generate MyBatis Artifacts</id>
+                          <goals>
+                              <goal>generate</goal>
+                          </goals>
+                      </execution>
+                  </executions>
+              </plugin>
+          </plugins>
+      </build>-->
 </project>

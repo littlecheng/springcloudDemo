@@ -76,6 +76,16 @@
         </dependency>
 
     </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
    <!--
      //这里这个插件会重新生成实体类，mapper类,最好使用过一次就注掉
 
