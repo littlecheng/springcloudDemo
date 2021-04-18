@@ -11,4 +11,17 @@
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
+    <properties>
+        <lombok.version>1.16.18</lombok.version>
+    </properties>
+    <!--Lombok-->
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>

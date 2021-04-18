@@ -10,7 +10,7 @@
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <!-- 生成的Java文件的编码 -->
         <property name="javaFileEncoding" value="UTF-8"/>
-
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"></plugin>
         <!--suppressAllComments 设置为true 则不再生成注释-->
         <commentGenerator>
             <property name="suppressAllComments" value="true" />

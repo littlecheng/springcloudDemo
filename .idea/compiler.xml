@@ -7,16 +7,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcloud-api" />
         <module name="springcloud-ribbon" />
+        <module name="springcloud-api" />
+        <module name="springcloud-eureka-server-001" />
         <module name="springcloud-eureka-server-000" />
         <module name="springcloud-consumer-dept-80" />
-        <module name="springcloud-provider-dept-8002" />
-        <module name="springcloud-eureka-server-001" />
-        <module name="springcloud-eureka-server-002" />
-        <module name="springcloud-provider-dept-8003" />
-        <module name="springcloud-api-feign" />
         <module name="springcloud-provider-dept-8001" />
+        <module name="springcloud-api-feign" />
+        <module name="springcloud-provider-dept-8003" />
+        <module name="springcloud-provider-dept-8002" />
+        <module name="springcloud-eureka-server-002" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
