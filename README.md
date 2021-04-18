@@ -16,6 +16,7 @@
 >127.0.0.1	eureka002.com
 >
 
-6.启动注册中心，提供者，网关
+6.启动注册中心，三个提供者，网关
 * 访问http://localhost:9001/user/select/2 
-* 访问http://localhost:9001/dept/select/1
+* 访问http://localhost:9001/dept/select/1 
+* http://localhost:9001/dept/getInfo  会发现端口不停交替轮询，可以发现网关具有负载均衡作用，其他作用待发现。。。
