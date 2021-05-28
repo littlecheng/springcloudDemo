@@ -30,7 +30,7 @@ public class Handler {
         return feginDept.saveDept(dept);
     }
 
-
+     //假如服务提供者没启动,直接访问/handle/getInfo 那么容错机制就会调用FeginDept  fallback属性设置FeginError 里的方法
     @GetMapping("/getInfo")
     public String getInfo(){
         return feginDept.getInfo();
