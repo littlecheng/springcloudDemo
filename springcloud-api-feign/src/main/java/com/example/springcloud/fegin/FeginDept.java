@@ -12,7 +12,7 @@ import java.util.List;
 @FeignClient(value = "provider",fallback = FeignError.class)
 public interface FeginDept {
 
-    @PostMapping(value = "/save",produces = "application/json")
+    @PostMapping(value = "/dept/save",produces = "application/json")
     boolean saveDept(@RequestBody  Dept dept);
 
 
