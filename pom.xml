@@ -20,6 +20,8 @@
         <module>springcloud-api-feign</module>
         <module>springcloud-gateway</module>
         <module>springcloud-hystrix</module>
+        <module>springcloud-native-config-server</module>
+        <module>springcloud-native-config-client</module>
     </modules>
 
     <packaging>pom</packaging>
