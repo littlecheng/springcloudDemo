@@ -1,0 +1,25 @@
+server:
+  port: 8060
+spring:
+  application:
+    name: hystrix
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+#断路器，起到降级作用，避免服务雪崩
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream'
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: localhost

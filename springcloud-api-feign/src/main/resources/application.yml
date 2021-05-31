@@ -11,7 +11,7 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: fegin-call
-#服务降级
+#断路器，起到降级作用，避免服务雪崩
 feign:
     hystrix:
       enabled: true

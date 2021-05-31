@@ -13,7 +13,7 @@ import java.util.List;
  * 接口注解方式
  * value="provider" 调用提供者的应用名称
  */
-@FeignClient(value = "provider",fallback = FeignError.class)
+@FeignClient(value = "provider")
 public interface FeginDept {
 
     @PostMapping(value = "/dept/save",produces = "application/json")
