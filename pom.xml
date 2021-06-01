@@ -22,6 +22,8 @@
         <module>springcloud-hystrix</module>
         <module>springcloud-native-config-server</module>
         <module>springcloud-native-config-client</module>
+        <module>springcloud-config-server</module>
+        <module>springcloud-config-client</module>
     </modules>
 
     <packaging>pom</packaging>
