@@ -1,9 +1,9 @@
 server:
-  port: 8010
+  port: 8020
 
 spring:
   application:
-    name: serviceA
+    name: serviceAa
 
 #Eureka的配置，该服务注册到eureka的地址
 eureka:
