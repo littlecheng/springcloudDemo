@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: serviceA
+    name: serviceAAA
 
 #Eureka的配置，该服务注册到eureka的地址
 eureka:
