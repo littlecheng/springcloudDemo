@@ -10,4 +10,4 @@ eureka:
       fetch-registry: true
       defaultZone: http://user:123456@localhost:8761/eureka/
 
-message: "远程配置"
+message: "远程配置AAAA"
