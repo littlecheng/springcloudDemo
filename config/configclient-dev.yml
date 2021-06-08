@@ -2,4 +2,4 @@ spring:
   application:
     name: serviceA
 
-message: "远程配置啊啊啊啊啊啊"
+message: "remote message"
