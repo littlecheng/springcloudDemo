@@ -2,12 +2,4 @@ spring:
   application:
     name: serviceA
 
-#Eureka的配置，该服务注册到eureka的地址
-eureka:
-  client:
-    serviceUrl:
-      register-with-eureka: true
-      fetch-registry: true
-      defaultZone: http://user:123456@localhost:8761/eureka/
-
-message: "远程配置AAAA"
+message: "远程配置AAAqqqqqqq"
