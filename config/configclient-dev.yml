@@ -6,7 +6,8 @@ spring:
 eureka:
   client:
     serviceUrl:
+      register-with-eureka: true
+      fetch-registry: true
       defaultZone: http://user:123456@localhost:8761/eureka/
-
 
 message: "远程配置"
