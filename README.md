@@ -50,7 +50,7 @@
          
      7.4其他微服务需要在注册中心注册时，必须加上user:12345@
      
-     7.5在刷新actuator/bus-refresh时，一定要把你的host文件关于github.com注释掉，不然启动配置中心时会报  Failed connect to github.com:443； Connection timed out 
+     7.5在刷新actuator/bus-refresh时，一定要把你的host文件关于github.com注释掉，不然启动配置中心时会报  Connect to github.com:443 [github.com/13.229.188.59] failed: Read timed out
      #140.82.112.3 github.com
      #140.82.113.9 codeload.github.com
      #199.232.69.194  github.global.ssl.fastly.net
