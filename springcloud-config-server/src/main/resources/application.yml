@@ -7,10 +7,13 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/littlecheng/springcloudDemo.git
+          uri: https://github.com/littlecheng/springcloudDemo.git  #仓库地址
+          force-pull: true
+          username:                  #仓库用户名
+          password:                       #仓库密码
+          default-label: main #配置文件分支
           search-paths: config
-          username:
-          password:
+          skipSslValidation: true
       label: main
   rabbitmq:
     host: localhost
@@ -18,16 +21,23 @@ spring:
     username: guest
     password: guest
 
-
-management:
-  endpoints:
-    web:
-       exposure:
-           include: "*"
-
-
-
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka,http://localhost:8762/eureka,http://localhost:8763/eureka
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://user:123456@eureka000.com:8761/eureka/,http://user:123456@eureka001.com:8761/eureka/,http://user:123456@eureka002.com:8761/eureka
+
+# 度量指标监控与健康检查
+management:
+  endpoints:
+    web:
+      base-path: /actuator    # 访问端点根路径，默认为 /actuator
+      exposure:
+           include: bus-refresh  # 需要开启的端点
+
+
+#logging:
+#  level:
+#    com.netflix.discovery: 'OFF'
+#    org.springframework.cloud: 'DEBUG'
