@@ -24,6 +24,7 @@
         <module>springcloud-native-config-client</module>
         <module>springcloud-config-server</module>
         <module>springcloud-config-client</module>
+        <module>springcloud-config-client2</module>
         <module>springcloud-zipkin-server</module>
         <module>springcloud-zipkin-client</module>
     </modules>

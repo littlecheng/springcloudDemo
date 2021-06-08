@@ -3,7 +3,10 @@ server:
 spring:
   application:
     name: eureka-server-001
-
+  security: #开启 http basic 的安全认证
+    user:
+      name: user
+      password: 123456
 #Eureka配置
 eureka:
   instance:
@@ -16,6 +19,6 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     serviceUrl:
-      defaultZone: http://eureka000.com:8761/eureka/,http://eureka002.com:8763/eureka/
+      defaultZone: http://user:123456@eureka000.com:8761/eureka/,http://user:123456@eureka002.com:8763/eureka/
       #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
 

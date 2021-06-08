@@ -1,5 +1,5 @@
 server:
-  port: 8020
+  port: 8030
 spring:
   cloud:
     config:
@@ -11,7 +11,7 @@ spring:
         service-id: configserver #配置中⼼心在 Eureka Server 上注册的名称
       username: user #在客户的bootstrap配置文件中增加下述内容，来实现springcloud-config-client2访问springcloud-config-server的用户登录：
       password: 123456
-#消息队列
+  #消息队列
   rabbitmq:
     host: localhost
     port: 5672

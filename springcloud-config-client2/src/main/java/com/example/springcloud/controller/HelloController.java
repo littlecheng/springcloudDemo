@@ -22,6 +22,11 @@ public class HelloController {
         return  applicationName  ;
     }
 
+    //指定局部刷新
+    // 访问该方法前,需要刷新 postman post方式 http://localhost:8080/actuator/bus-refresh/serviceAAA:8030
+    // http://localhost:8080为configserver端口，
+    // serviceAAA：8030
+    // serviceAAA为远程配置的spring.application.name,8030为configclient设置的端口号server.port= 8030
     @GetMapping("/message")
     public String getMessage(){
         return this.message;

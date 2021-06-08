@@ -1,7 +1,12 @@
 spring:
  application:
   name: consumer-dept
-
+ devtools:
+  restart:
+   enabled: true
+   additional-paths:
+     - src/main/java
+   exclude: resources/**
 server:
  port: 80
 
@@ -9,15 +14,7 @@ server:
 eureka:
  client:
   service-url:
-   defaultZone: http://localhost:8761/eureka
+   defaultZone: http://user:123456@eureka000.com:8761/eureka/,http://user:123456@eureka001.com:8761/eureka/,http://user:123456@eureka002.com:8761/eureka
  instance:
   #修改Eureka监控页中status的默认描述信息。不配置默认为DESKTOP-XXX描述
   instance-id: springcloud-consumer-dept-80
-
-
- #热部署
-devtools:
-  restart:
-   enabled: true
-   ditional-paths: src/main/java
-   exclude: WEB/INF/**

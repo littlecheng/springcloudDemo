@@ -14,7 +14,7 @@ public class DeptConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final  String REST_URL_PREFIX = "http://localhost:8001";
+    private static final  String REST_URL_PREFIX = "http://localhost:8001";//要调用的接口
 
     @GetMapping("/select/{id}")
     public Dept selectByID(@PathVariable(name="id") Long id){
