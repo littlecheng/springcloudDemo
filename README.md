@@ -74,4 +74,5 @@
 例如
 message: '{cipher}AQBNaNKN0Av59gUsd3ouk2WH2MViH5ag3S5zxCSQyWOCPxNx9ds+be+9UVTJEk2jX1Y0TCvZSbAnR6pr0am3uZ1qD6nqkxPU1vjd4hKTx/B+FmLaP2QXT7c8WKjUV3MlPpyD1w7ao02sK3M/fguiNK8wZN6Cl14tg8NxZoER/AWMOgIiUoO6x9CIhOpr4zAf1lwNxneliPdfinifjfrKZ07DJZeU1lFw9HjPlFn1ctRsLJXxp9yYIoshmqa9ypAe1Gl1QTC38d9af0YmJYtIGE5mG97VajTVRBVhbDCisE7PFDH9L2/cC7UzffQLKdEp7C13wdv4mXySq8frL5eE/yRBOO0EtPwCGxXBPpUjB1/+ZISsllUFBVKpa2kxAudms3k='
 
-8.4 访问http://localhost:8030/hello/message，得到解密内容
+8.4 访问http://localhost:8030/hello/message，得到解密内容;
+    访问http://localhost:8888/main/configclient-dev.yml得到解密内容
