@@ -57,8 +57,10 @@
      
     7.6 先启动注册中心，再启动配置中心，最后启动客户端
    8. 配置中心设置加密
+   
    8.1在E:\Program Files\Java\jdk1.8.0_131\jre\bin 目录执行如下命令 ，在当前位置会生成server.jks,复制到configserver模块 classpath目录下。
    keytool -genkeypair -alias mytestkey -keyalg RSA -dname "CN=Web Server,OU=Unit,O=Organization,L=City,S=State,C=US" -keypass changeme -keystore server.jks -storepass letmein
+   
    8.2新建bootstrap.yml ,添加如下内容
    encrypt:
   key: mykey
@@ -67,7 +69,9 @@
     password: letmein
     alias: mytestkey
     secret: changeme
+    
 8.3利用postman 访问localhost:8888/encrypt ,在body选项下 raw ，text，输入你的内容world,点击post,得到加密后的内容，放到你的配置文件中。
 例如
 message: '{cipher}AQBNaNKN0Av59gUsd3ouk2WH2MViH5ag3S5zxCSQyWOCPxNx9ds+be+9UVTJEk2jX1Y0TCvZSbAnR6pr0am3uZ1qD6nqkxPU1vjd4hKTx/B+FmLaP2QXT7c8WKjUV3MlPpyD1w7ao02sK3M/fguiNK8wZN6Cl14tg8NxZoER/AWMOgIiUoO6x9CIhOpr4zAf1lwNxneliPdfinifjfrKZ07DJZeU1lFw9HjPlFn1ctRsLJXxp9yYIoshmqa9ypAe1Gl1QTC38d9af0YmJYtIGE5mG97VajTVRBVhbDCisE7PFDH9L2/cC7UzffQLKdEp7C13wdv4mXySq8frL5eE/yRBOO0EtPwCGxXBPpUjB1/+ZISsllUFBVKpa2kxAudms3k='
+
 8.4 访问http://localhost:8030/hello/message，得到解密内容
