@@ -2,7 +2,6 @@ package com.example.springcloud.ribbon.controller;
 
 import com.example.springcloud.pojo.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 

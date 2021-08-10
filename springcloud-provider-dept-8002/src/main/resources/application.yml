@@ -33,10 +33,11 @@ eureka:
  instance:
      #修改Eureka监控页中status的默认描述信息。不配置默认为DESKTOP-XXX描述
     instance-id: springcloud-provider-dept-8002
+    prefer-ip-address: true
    # 心跳检测检测与续约时间
    # 测试时将值设置设置小些，保证服务关闭后注册中心能及时踢出服务
-    lease-renewal-interval-in-seconds: 1
-    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
 
 #热部署
 devtools:
