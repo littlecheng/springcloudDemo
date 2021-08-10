@@ -1,6 +1,7 @@
 package com.example.springcloud.controller;
 
 import com.example.springcloud.pojo.User;
+import com.example.springcloud.service.LogService;
 import com.example.springcloud.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
