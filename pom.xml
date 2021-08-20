@@ -28,6 +28,7 @@
         <module>springcloud-zipkin-server</module>
         <module>springcloud-zipkin-client</module>
         <module>springcloud-rocketmq</module>
+        <module>jwt</module>
     </modules>
 
     <packaging>pom</packaging>
