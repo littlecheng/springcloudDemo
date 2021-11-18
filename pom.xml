@@ -29,6 +29,7 @@
         <module>springcloud-zipkin-client</module>
         <module>springcloud-rocketmq</module>
         <module>jwt</module>
+        <module>common-swagger</module>
     </modules>
 
     <packaging>pom</packaging>

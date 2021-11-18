@@ -13,8 +13,8 @@ public class SpringcloudGatewayApplication {
         SpringApplication.run(SpringcloudGatewayApplication.class, args);
     }
 
-
-    @Bean
+//配置了以下代码,配置文件里的就不需要配置了。
+   /* @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("path_route", r -> r.path("/dept/**")
@@ -22,6 +22,6 @@ public class SpringcloudGatewayApplication {
                 .route(r->r.path("/user/**")
                         .uri("lb://provider"))
                 .build();
-    }
+    }*/
 
 }

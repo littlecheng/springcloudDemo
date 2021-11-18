@@ -12,14 +12,9 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Accessors(chain = true)
 public class Dept implements Serializable {
-    @Getter
-    @Setter
+
     private Long deptno;
-    @Getter
-    @Setter
     private String dname;
-    @Getter
-    @Setter
     private String db_source;
 
     public Dept(String dname) {

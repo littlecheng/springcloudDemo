@@ -14,7 +14,7 @@ eureka:
     prefer-ip-address: true
   # 是否开启注册中心自我保护机制(true开，false关，默认为开)
   server:
-    enable-self-preservation: true
+    enable-self-preservation: false
   client:
     register-with-eureka: false
     fetch-registry: false

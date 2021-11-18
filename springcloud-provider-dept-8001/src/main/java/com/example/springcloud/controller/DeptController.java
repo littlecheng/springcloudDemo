@@ -2,7 +2,8 @@ package com.example.springcloud.controller;
 
 import com.example.springcloud.pojo.Dept;
 import com.example.springcloud.service.DeptService;
-
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -10,7 +11,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@Api(tags = "部门管理")
 @RestController
 @RequestMapping("/dept")
 public class DeptController {
@@ -20,28 +21,30 @@ public class DeptController {
     private DiscoveryClient client;
 
     @Autowired
-    DeptService deptService;
+    private DeptService deptService;
 
     @Value("${server.port}")
     private int port ;
 
+    @ApiOperation("查询所有")
     @GetMapping("/select")
     public List<Dept> get(){
        return deptService.selectAll();
     }
 
-
+    @ApiOperation("查询部门")
     @GetMapping("/select/{id}")
     public Dept selectByID(@PathVariable(name="id") Long id){
         return deptService.selectByID(id);
     }
 
+    @ApiOperation("保存")
     @PostMapping(value = "/save",produces = "application/json")
     public boolean saveDept(@RequestBody  Dept dept){
         return deptService.saveDept(dept);
     }
 
-
+    @ApiOperation("查询端口号")
     @GetMapping("/getInfo")
     public String getInfo(){
         return "port:"+port;
